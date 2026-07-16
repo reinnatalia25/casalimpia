@@ -1,3 +1,5 @@
 ---
-title: "Home"
+title: "About"
 ---
+
+About information goes here.
