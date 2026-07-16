@@ -576,3 +576,73 @@ section[id]{
 }
 
 }
+
+/* ==========================
+   MOBILE NAVIGATION
+========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    color:#0077b6;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+    position:relative;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+nav ul{
+
+    display:none;
+
+    flex-direction:column;
+
+    position:absolute;
+
+    top:70px;
+
+    right:0;
+
+    width:220px;
+
+    background:white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    border-radius:12px;
+
+    padding:20px;
+
+    gap:20px;
+
+}
+
+nav ul.active{
+
+    display:flex;
+
+}
+
+nav ul li{
+
+    text-align:center;
+
+}
+
+}
