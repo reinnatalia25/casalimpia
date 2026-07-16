@@ -1,8 +1,53 @@
-baseURL = "https://reinnatalia25.github.io/casalimpia/"
-languageCode = "en-us"
-title = "Casa Limpia"
+name: Deploy Hugo Site
 
-disableKinds = ["taxonomy","term"]
+on:
 
-[params]
-description = "Professional Exterior House Cleaning"
+  push:
+
+    branches:
+
+      - main
+
+permissions:
+
+  contents: read
+
+  pages: write
+
+  id-token: write
+
+concurrency:
+
+  group: pages
+
+  cancel-in-progress: true
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+        with:
+
+          submodules: recursive
+
+      - uses: peaceiris/actions-hugo@v2
+
+        with:
+
+          hugo-version: latest
+
+      - run: hugo
+
+      - uses: actions/upload-pages-artifact@v3
+
+        with:
+
+          path: ./public
+
+      - uses: actions/deploy-pages@v4
