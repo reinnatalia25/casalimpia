@@ -424,72 +424,88 @@ section[id]{
 }
 
 /* ==========================
-   FREE ESTIMATE
+   REQUEST A FREE ESTIMATE
 ========================== */
 
 #estimate{
 
-    background:white;
+    background:#f3f8fc;
+
+    padding:100px 20px;
 
 }
 
-.estimate-intro{
-
-    text-align:center;
-
-    max-width:700px;
-
-    margin:20px auto 50px;
-
-}
-
-.estimate-form{
+.estimate-box{
 
     max-width:900px;
 
     margin:auto;
 
-}
+    background:white;
 
-.form-row{
+    padding:50px;
 
-    display:flex;
+    border-radius:18px;
 
-    gap:25px;
-
-    margin-bottom:25px;
-
-    flex-wrap:wrap;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
 
 }
 
-.form-group{
+.estimate-box h2{
 
-    flex:1;
+    text-align:center;
+
+    color:#0077b6;
+
+    margin-bottom:15px;
+
+}
+
+.estimate-text{
+
+    text-align:center;
+
+    color:#555;
+
+    margin-bottom:40px;
+
+    max-width:650px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.estimate-form{
 
     display:flex;
 
     flex-direction:column;
 
-}
-
-.form-group label{
-
-    margin-bottom:8px;
-
-    font-weight:bold;
-
-    color:#333;
+    gap:22px;
 
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea{
+.form-row{
 
-    padding:14px;
+    display:grid;
 
-    border:1px solid #ccc;
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+.estimate-form input,
+.estimate-form select,
+.estimate-form textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid #d6d6d6;
 
     border-radius:10px;
 
@@ -497,21 +513,43 @@ section[id]{
 
     font-family:inherit;
 
+    transition:.25s;
+
 }
 
-.form-group textarea{
+.estimate-form input:focus,
+.estimate-form select:focus,
+.estimate-form textarea:focus{
+
+    outline:none;
+
+    border-color:#00a8e8;
+
+    box-shadow:0 0 0 3px rgba(0,168,232,.18);
+
+}
+
+.estimate-form textarea{
 
     resize:vertical;
+
+    min-height:160px;
 
 }
 
 .estimate-form .button{
 
-    margin-top:30px;
+    width:100%;
 
     border:none;
 
     cursor:pointer;
+
+    font-size:1.1rem;
+
+    padding:18px;
+
+    margin-top:10px;
 
 }
 
@@ -521,11 +559,19 @@ section[id]{
 
 }
 
+/* Mobile */
+
 @media(max-width:768px){
 
 .form-row{
 
-    flex-direction:column;
+    grid-template-columns:1fr;
+
+}
+
+.estimate-box{
+
+    padding:35px 25px;
 
 }
 
