@@ -2,7 +2,4 @@ baseURL = "https://reinnatalia25.github.io/casalimpia/"
 languageCode = "en-us"
 title = "Casa Limpia"
 
-disableKinds = ["taxonomy","term"]
-
-[params]
-description = "Professional Exterior House Cleaning"
+disableKinds = ["taxonomy", "term"]
