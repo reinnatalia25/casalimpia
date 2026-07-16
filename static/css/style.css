@@ -347,3 +347,78 @@ nav ul{
 }
 
 }
+
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery-hero{
+
+    padding-top:180px;
+
+    padding-bottom:70px;
+
+    text-align:center;
+
+    background:#f7f9fb;
+
+}
+
+.gallery-hero h1{
+
+    font-size:3rem;
+
+    color:#0077b6;
+
+}
+
+.gallery-hero p{
+
+    margin-top:15px;
+
+    font-size:1.2rem;
+
+}
+
+.gallery-grid{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.gallery-grid p{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    font-weight:bold;
+
+}
+
+section[id]{
+
+    scroll-margin-top:120px;
+
+}
